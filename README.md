@@ -1,2 +1,1 @@
-# docker-ethereum
-Docker containers for Ethereum
+Docker containers for Ethereum.
