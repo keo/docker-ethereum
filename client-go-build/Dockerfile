@@ -22,6 +22,10 @@ RUN cp /core-optimisations-2/build/bin/geth /usr/local/bin/
 ADD supervisord.conf supervisord.conf
 ADD start.sh start.sh
 
+# cleanup
+RUN rm -rf /go-ethereum /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+
 EXPOSE 8545
 EXPOSE 30303
 
