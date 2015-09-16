@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get install -q -y software-properties-common
 RUN add-apt-repository ppa:ethereum/ethereum
-RUN add-apt-repository ppa:ethereum/ethereum-dev
+# RUN add-apt-repository ppa:ethereum/ethereum-dev
 RUN apt-get update
 RUN apt-get upgrade -q -y
 RUN apt-get install -q -y unattended-upgrades geth supervisor curl
