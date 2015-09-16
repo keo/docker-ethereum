@@ -15,9 +15,9 @@ RUN apt-get install -q -y unattended-upgrades git supervisor curl
 
 # compile
 RUN apt-get install -q -y build-essential libgmp3-dev golang
-RUN git clone https://github.com/obscuren/go-ethereum --single-branch core-optimisations-2
-RUN cd core-optimisations-2 && make geth
-RUN cp /core-optimisations-2/build/bin/geth /usr/local/bin/
+RUN git clone https://github.com/ethereum/go-ethereum
+RUN cd go-ethereum && make geth
+RUN cp /go-ethereum/build/bin/geth /usr/local/bin/
 
 ADD supervisord.conf supervisord.conf
 ADD start.sh start.sh
