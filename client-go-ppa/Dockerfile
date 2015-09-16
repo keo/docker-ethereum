@@ -15,6 +15,7 @@ RUN apt-get install -q -y unattended-upgrades geth supervisor curl
 
 ADD supervisord.conf supervisord.conf
 ADD start.sh start.sh
+RUN mkdir /root/.ethereum
 
 # cleanup
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

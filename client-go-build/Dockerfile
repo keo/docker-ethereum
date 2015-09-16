@@ -21,6 +21,7 @@ RUN cp /go-ethereum/build/bin/geth /usr/local/bin/
 
 ADD supervisord.conf supervisord.conf
 ADD start.sh start.sh
+RUN mkdir /root/.ethereum
 
 # cleanup
 RUN rm -rf /go-ethereum /var/lib/apt/lists/* /tmp/* /var/tmp/*
